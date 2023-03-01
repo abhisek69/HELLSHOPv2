@@ -8,5 +8,6 @@
     width: 300px;
 }
 ::ng-deep .mat-datepicker-content{
-    background: rgba($color: white, $alpha: .9)  ;
+    background: rgba($color: grey, $alpha: 1)  ;
+    padding: 5px;
 }
