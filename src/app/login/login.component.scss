@@ -1,0 +1,17 @@
+.logincomp{
+    text-align: center;
+}
+.hovertext:hover{
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.logincomp button{
+    font-size: 20px;
+}
+
+
+.logincomp mat-form-field{
+    width: 15rem;
+}

@@ -1,0 +1,21 @@
+//variables
+$ts-bg:rgba($color: white, $alpha: .5);
+$red:red;
+.pagecontent{
+    height: 100vh;
+    // 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.darkmodebutton{
+   position: absolute;
+   top: 2%;
+   right: 2%;
+}
+.light {
+    background: linear-gradient(45deg, rgb(194, 75, 1),rgb(255, 255, 255));
+}
+.dark {
+    background: linear-gradient(45deg, rgb(58, 0, 49),rgb(182, 107, 180));
+}

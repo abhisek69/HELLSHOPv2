@@ -1,0 +1,14 @@
+<div class="page"  [ngClass]="{'dark-theme-mode':isDarkenable,'light-theme':!isDarkenable}" >
+  <div class="pagecontent" [ngClass]="{'light' : toggle, 'dark': !toggle}">
+    <div class="darkmodebutton"> 
+      <button  style="background: rgb(66,66,66);" *ngIf="isDarkenable" mat-fab (click)="toggledark()" (click)="storethemelocal()">
+        <mat-icon class="themeicon" style="color: #a25a9f;"> highlight</mat-icon>
+      </button>
+      <button style="background: orangered;" *ngIf="!isDarkenable" mat-fab (click)="toggledark()" (click)="storethemelocal()">
+        <mat-icon class="themeicon"  style="color: white;"> highlight</mat-icon>
+      </button>
+    </div>   
+    <router-outlet></router-outlet>
+  </div>
+</div>
+

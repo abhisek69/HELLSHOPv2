@@ -1,0 +1,81 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+
+$HELLSHOPv2-primary: mat.define-palette(mat.$orange-palette,800);
+$HELLSHOPv2-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$HELLSHOPv2-warn: mat.define-palette(mat.$red-palette);
+//for dark mode
+$HELLSHOPv2-primary-dark: mat.define-palette(mat.$purple-palette,600);
+$HELLSHOPv2-accent-dark: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$HELLSHOPv2-warn-dark: mat.define-palette(mat.$red-palette);
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$HELLSHOPv2-theme: mat.define-light-theme((
+  color: (
+    primary: $HELLSHOPv2-primary,
+    accent: $HELLSHOPv2-accent,
+    warn: $HELLSHOPv2-warn,
+  )
+));
+$HELLSHOPv2-theme-dark: mat.define-dark-theme((
+  color: (
+    primary: $HELLSHOPv2-primary-dark,
+    accent: $HELLSHOPv2-accent-dark,
+    warn: $HELLSHOPv2-warn-dark,
+  )
+));
+.dark-theme-mode{
+  @include mat.all-component-themes($HELLSHOPv2-theme-dark);
+  //global background
+  .gb mat-card{
+    background-color: rgba($color: purple, $alpha: .7);
+  }
+}
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+.light-theme{
+  @include mat.all-component-themes($HELLSHOPv2-theme);
+  //global background
+  .gb  mat-card{
+    background-color: rgba($color: #d17840, $alpha: .1);
+  }
+}
+
+
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+//custom scrollbar
+::-webkit-scrollbar {
+  width: 8px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(158, 158, 158); 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(125, 125, 125); 
+}
+
+//variables
