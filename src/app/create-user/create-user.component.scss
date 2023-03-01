@@ -7,3 +7,6 @@
     scrollbar-gutter: stable;
     width: 300px;
 }
+::ng-deep .mat-datepicker-content{
+    background: rgba($color: white, $alpha: .9)  ;
+}
